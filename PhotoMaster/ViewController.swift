@@ -57,6 +57,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     let textFontAttributes = [
     NSFontAttributeName: UIFont(name: "Arial", size: 120)!,
     NSForegroundColorAttributeName: UIColor.red]
+        return = true
+        
     }
     
 
