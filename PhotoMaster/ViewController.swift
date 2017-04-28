@@ -26,12 +26,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     //camera button method
     @IBAction func onTappedCameraButton() {
         presentPickerController(sourceType: .camera)
-        
     }
     
     @IBAction func onTappedAlbumButton() {
         presentPickerController(sourceType: .photoLibrary)
-        
     }
     
     func presentPickerController(sourceType: UIImagePickerControllerSourceType) {
@@ -52,15 +50,56 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func drawText(image: UIImage) -> UIImage {
     
-    let text = "LifeisTech!/niPhoneアプリ開発コース"
+    let text = "LifeisTech!\niPhoneアプリ開発コース"
     
     let textFontAttributes = [
     NSFontAttributeName: UIFont(name: "Arial", size: 120)!,
     NSForegroundColorAttributeName: UIColor.red]
-        return = true
+    
+    UIGraphicsBeginImageContext(image.size)
         
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        
+        let margin: CGFloat = 5.0
+        let textRect =  CGRect(x: margin, y: margin, width: image.size.width - margin, height: image.size.height - margin)
+        
+        text.draw(in: textRect, withAttributes: textFontAttributes)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
+    func drawMaskImage(image: UIImage) -> UIImage {
+        let maskImage = UIImage(named: "furo_ducky")!
+        
+        UIGraphicsBeginImageContext(image.size)
+        
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        
+        let margin: CGFloat = 50.0
+        let maskRect = CGRect(x: image.size.width - maskImage.size.width - margin,
+                              y: image.size.height - maskImage.size.height - margin,
+                              width: maskImage.size.width, height: maskImage.size.height)
+        
+        maskImage.draw(in: maskRect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    @IBAction func onTappedTextButton() {
+        if photoImageView.image != nil {
+            photoImageView.image = drawText(image: photoImageView.image!)
+        } else {
+            print("画像がありません")
+        }
+    }
 
 }
 

@@ -14,6 +14,7 @@
 		8B25D2A61EAABD0500A8B88E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B25D2A41EAABD0500A8B88E /* LaunchScreen.storyboard */; };
 		8B25D2B11EAABD0600A8B88E /* PhotoMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B25D2B01EAABD0600A8B88E /* PhotoMasterTests.swift */; };
 		8B25D2BC1EAABD0600A8B88E /* PhotoMasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B25D2BB1EAABD0600A8B88E /* PhotoMasterUITests.swift */; };
+		8BE3ABE41EB3342E00E5541C /* furo_ducky.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE3ABE31EB3342E00E5541C /* furo_ducky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8B25D2B71EAABD0600A8B88E /* PhotoMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B25D2BB1EAABD0600A8B88E /* PhotoMasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMasterUITests.swift; sourceTree = "<group>"; };
 		8B25D2BD1EAABD0600A8B88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE3ABE31EB3342E00E5541C /* furo_ducky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = furo_ducky.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		8B25D29A1EAABD0500A8B88E /* PhotoMaster */ = {
 			isa = PBXGroup;
 			children = (
+				8BE3ABE31EB3342E00E5541C /* furo_ducky.png */,
 				8B25D29B1EAABD0500A8B88E /* AppDelegate.swift */,
 				8B25D29D1EAABD0500A8B88E /* ViewController.swift */,
 				8B25D29F1EAABD0500A8B88E /* Main.storyboard */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE3ABE41EB3342E00E5541C /* furo_ducky.png in Resources */,
 				8B25D2A61EAABD0500A8B88E /* LaunchScreen.storyboard in Resources */,
 				8B25D2A31EAABD0500A8B88E /* Assets.xcassets in Resources */,
 				8B25D2A11EAABD0500A8B88E /* Main.storyboard in Resources */,
@@ -516,6 +520,7 @@
 				8B25D2C21EAABD0600A8B88E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B25D2C31EAABD0600A8B88E /* Build configuration list for PBXNativeTarget "PhotoMasterTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				8B25D2C51EAABD0600A8B88E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B25D2C61EAABD0600A8B88E /* Build configuration list for PBXNativeTarget "PhotoMasterUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				8B25D2C81EAABD0600A8B88E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
